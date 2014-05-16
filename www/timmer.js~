@@ -1,0 +1,8 @@
+var t1 = new Date();
+var t2 = 0;
+
+while(t2== 0 || t2.valueOf() - t1.valueOf() <5000){
+  t2 = new Date();
+}
+
+console.log("timeout!!!");

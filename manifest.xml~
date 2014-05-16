@@ -1,0 +1,14 @@
+<package>
+  <description brief="mayfest2014">
+
+     mayfest2014
+
+  </description>
+  <author>JSK applications</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/mayfest2014</url>
+
+</package>
+
+

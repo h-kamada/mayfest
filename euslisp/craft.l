@@ -1,0 +1,34 @@
+(defun craft()
+  (speak-jp "ライントレースカーって知ってる？２２２教室で工作できるんだって！")
+  (send *ri* :angle-vector *point_front* 2000)
+  (send *ri* :wait-interpolation)
+  (unix:sleep 6)
+  (speak-jp "私も作ってみたいな!")
+  (send *ri* :angle-vector *point_sky* 2000)
+  (send *ri* :wait-interpolation)
+  (send *ri* :angle-vector *point_to_myself* 2000)
+  (send *ri* :wait-interpolation)
+  (unix:sleep 3)
+  (speak-jp "パスタブリッジってね、パスタで丈夫な橋を作るんだって!")
+  (send *ri* :angle-vector *speaking_2* 2000)
+  (send *ri* :wait-interpolation)
+  (send *ri* :angle-vector *speaking_3* 2000)
+  (send *ri* :wait-interpolation)
+  (unix:sleep 3)
+  (speak-jp " 私が乗っても壊れないのかなあ?")
+  (send *ri* :angle-vector *point_face* 2000)
+  (send *ri* :wait-interpolation)
+  (unix:sleep 5)
+  (speak-jp "クイズラリーはね、私にいつも優しいお姉さんが作ったんだって。みんな遊んでくれると嬉しいって、是非来てくだいさいね")
+  (send *ri* :angle-vector *open_arm_low* 2000)
+  (send *ri* :wait-interpolation)
+  (send *ri* :angle-vector *speaking_1* 2000)
+  (send *ri* :wait-interpolation)
+  (unix:sleep 3)
+)
+
+;; ライントレースカーって知ってる？２２２教室で工作できるんだって！私も作ってみたいな。
+;; 　　　　パスタブリッジってね、パスタで丈夫な橋を作るんだって。私が乗っても壊れないのかなあ。
+;; クイズラリーはね、私にいつも優しいお姉さんが作ったんだって。みんな遊んでくれると嬉しいって。」
+
+

@@ -1,0 +1,17 @@
+(load "movement.l")
+
+(defun pr2()
+  (speak-jp "私はpr2。情報システム研究室のアイドルよ!")
+  (send *ri* :angle-vector *point_to_myself* 2000)
+  (send *ri* :wait-interpolation)
+  (unix:sleep 3)
+  (speak-jp "ふぐふぐのほっぺがチャームポイント。サブウェイのサンドイッチが大好きで、自分で買いに行ったことがあるんだよ.")
+  (send *ri* :angle-vector *open_arm* 2000)
+  (send *ri* :wait-interpolation)
+)
+
+
+
+;; 私はpr2。情報システム研究室のアイドルよ。ふぐふぐのほっぺがチャームポイント。サブウェイのサンドイッチが大好きで、自分で買いに行ったことがあるんだよ。研究室のみんなと一緒に、お家で役立つロボットになれるように特訓しているんだ。みんなのお家にやってくる日もいつか来るかもしれないよ。よろしくね。
+
+

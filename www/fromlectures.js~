@@ -1,0 +1,26 @@
+$('.tlt').textillate();
+
+$('.tlt1').textillate({
+  loop:true,
+  initialDelay:3000,
+    out:{
+      effect: 'fadeOutRight',
+      sync: true,
+    },
+});
+
+$('.tlt2').textillate({
+  initialDelay:10000,
+    out:{
+      effect: 'fadeOutRight',
+      sync: true,
+    },
+});
+
+var worker = new Worker('timmer.js');
+worker.postMessage(6);
+
+worker.onmessage = function(e){
+  console.log(e.data);
+  window.location = "./";
+}

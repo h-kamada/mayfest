@@ -1,0 +1,79 @@
+var ros = new ROSLIB.Ros({
+  url: 'ws://' + location.hostname + ':8888'
+});
+
+var topic = new ROSLIB.Topic({
+  ros: ros,
+  name: '/mayfest2014/click',
+  messageType: 'std_msgs/UInt8'
+});
+
+var str = "~機械系二学科学生展示~";
+title = document.createElement('div');
+title.appendChild(document.createTextNode("~機械系二学科学生展示~"))
+title.style.textAlign = "center";
+
+function idle(){
+var msg = new ROSLIB.Message({
+  data: 0
+});
+  console.log("idle");
+  topic.publish(msg);
+}
+
+idle();
+
+function pr2click() {
+  window.location = "pr2.html";
+  var msg = new ROSLIB.Message({
+    data: 1
+  });
+  console.log("craftclick");
+  topic.publish(msg);
+}
+
+function craftclick() {
+  window.location = "craft.html";
+  var msg = new ROSLIB.Message({
+    data: 2
+  });
+  console.log("craftclick");
+  topic.publish(msg);
+};
+
+function appsclick() {
+  window.location = "apps.html";
+  var msg = new ROSLIB.Message({
+    data: 3
+  });
+  console.log("appsclick");
+  topic.publish(msg);
+}
+
+function engineeringclick() {
+  window.location = "engineering.html";
+  var msg = new ROSLIB.Message({
+    data: 4
+  });
+  console.log("engineerclick");
+  topic.publish(msg);
+}
+
+
+function labclick() {
+  window.location = "lab.html";
+  var msg = new ROSLIB.Message({
+    data: 5
+  });
+  console.log("labclick");
+  topic.publish(msg);
+}
+
+function fromlecturesclick() {
+  window.location = "fromlectures.html";
+   var msg = new ROSLIB.Message({
+    data: 6
+  });
+  console.log("fromlecturesclick");
+  topic.publish(msg);
+}
